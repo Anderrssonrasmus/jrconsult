@@ -1,0 +1,43 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  position: absolute;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fffdff;
+  mix-blend-mode: difference;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.progress-bar {
+  width: 5px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  background: black;
+  mix-blend-mode: difference;
+  z-index: 9999999999999999999;
+  border: none;
+  outline: none;
+  visibility: hidden;
+}
+
+.progress-bar #scrollbar {
+  width: 100%;
+  background: #fffdff;
+  mix-blend-mode: difference;
+  visibility: visible;
+}
+/*# sourceMappingURL=scrollbar.css.map */

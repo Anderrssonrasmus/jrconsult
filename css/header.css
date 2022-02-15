@@ -1,0 +1,118 @@
+header {
+  width: 100%;
+  height: 5em;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  background: #fffdff;
+  background-blend-mode: color-burn;
+  z-index: 99999999;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+header .header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #000;
+}
+
+header .header-inner .logo {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Comforter;
+}
+
+header .header-inner .logo a {
+  color: #000;
+  text-decoration: none;
+  font-size: 2.5rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+header .header-inner .logo:hover a {
+  color: #ff2828 !important;
+}
+
+header .header-inner .burger {
+  display: none;
+}
+
+header .header-inner .menu {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+header .header-inner .menu ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header .header-inner .menu ul li {
+  margin: 0 1em 0 0;
+  font-family: montserrat;
+  font-size: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header .header-inner .menu ul li:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: -100%;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background: #000;
+}
+
+header .header-inner .menu ul li:hover:after {
+  background: #ff2828;
+  left: 0;
+}
+
+header .header-inner .menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+
+.dark {
+  background: #111111 !important;
+}
+
+.dark .header-inner {
+  border-color: #fffdff !important;
+}
+
+.dark .header-inner .logo a {
+  color: #fffdff !important;
+}
+
+.dark .header-inner .menu a {
+  color: #fffdff !important;
+}
+/*# sourceMappingURL=header.css.map */

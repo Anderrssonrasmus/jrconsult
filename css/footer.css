@@ -1,0 +1,66 @@
+footer {
+  width: 100%;
+  height: 5em;
+  padding: 0 2em;
+  background: #fffdff;
+  z-index: 9999999999;
+  position: relative;
+}
+
+footer .footer-inner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #000;
+  padding: 0 1em;
+}
+
+footer .footer-inner h1 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+footer .footer-inner p, footer .footer-inner a {
+  font-family: montserrat;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+footer .footer-inner a {
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer-inner a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: -100%;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background: #000;
+}
+
+footer .footer-inner a:hover:after {
+  background: #ff2828;
+  left: 0;
+}
+/*# sourceMappingURL=footer.css.map */

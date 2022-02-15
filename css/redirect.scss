@@ -1,0 +1,31 @@
+.preloader {
+    content: "";
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: slideOut 2s linear; 
+    visibility: hidden;
+    z-index: 99999999999;
+    display: grid;
+    place-items: center;
+
+    h1{
+        color: white;
+        font-size: 5rem;
+    }
+}
+@keyframes slideIn { 
+    from { right: -100%; }
+    to { right: 0;}
+}
+.bounceout {
+    animation: slideIn 1s ease;
+}
+@keyframes slideOut {
+    from { opacity: 1; visibility: visible; } 
+    75%{ opacity: 1; visibility: visible;}
+    to { opacity: 0; visibility: hidden;}
+}

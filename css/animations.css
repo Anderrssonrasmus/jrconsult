@@ -1,0 +1,10 @@
+.slideAnimation {
+  opacity: 1 !important;
+}
+
+.slide {
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/*# sourceMappingURL=animations.css.map */

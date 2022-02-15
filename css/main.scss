@@ -1,0 +1,182 @@
+@import "variables";
+
+main{
+    height: fit-content;
+    width: 100%;
+    margin-top: 5em;
+    background: $white;
+    position: relative;
+    z-index: 10;
+
+    .three{
+        width: 100%;
+        height: calc(100vh - 5em);
+        position: relative;
+        pointer-events: none;
+
+        .textBox{
+            width: 100%;
+            height: 80%;//fit-content;
+            padding: 2em;
+            margin-bottom: 2em;
+            position: relative;
+            z-index: -20;
+            display: grid;
+            place-items: center;
+            pointer-events: all;
+
+
+            h2{
+                font-size: 3rem;
+                font-family: "open sans";
+                font-weight: 800;
+            }
+
+            div{
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                bottom: -5%;
+                z-index: 10;
+                opacity: 0;
+                transform: translateY(-20%);
+                transition: all 0.5s ease;
+
+                i{
+                    font-size: 3rem;
+                    -webkit-text-stroke: 2px $white;
+    
+                    transition: 0.5s ease;
+                }
+
+                &:hover i{
+                    color: $red;
+                }
+            }
+
+
+    
+            p{
+                font-family: "inter";
+                font-size: 9rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                line-height: 11rem;
+                letter-spacing: .05rem;
+            }
+    
+            p:nth-child(2){
+                text-align: right;
+            }
+    
+            p:nth-child(3){
+                text-align: center;
+            }
+        }
+    }
+
+    .main-section{
+        width: 100%;
+        height: fit-content;
+        z-index: 100;
+
+        .img-text{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 4em;
+            background: $dark;
+            position: relative;
+            //box-shadow: 0px -5px 15px 5px rgba(0,0,0,0.6);
+    
+            .shadow{
+                width: 100%;
+                height: 10%;
+                position: absolute;
+                top: 0;
+                background: $dark;
+                box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.70);
+                z-index: -1;
+            }
+    
+            img{
+                width: 30%;
+            }
+
+            @media screen and (max-width: 1630px) {
+                img{
+                    width: 40%;
+                }
+
+                .text{
+                    width: 50%;
+                }
+            }
+    
+            .text{
+                color: $white;
+                width: 40%;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+
+                h2{
+                    font-size: 3rem;
+                    font-family: "open sans";
+                    font-weight: 800;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-family: "montserrat";
+                    line-height: 1.5;
+
+                    &:nth-child(2){
+                        margin-bottom: 4em;
+                    }
+                }
+
+            }
+        }
+    
+        .fader{
+            height: 20vh;
+            width: 100%;
+            position: relative;
+            margin-top: -2px;
+            //filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.70));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.70));
+            margin-bottom: 5em;
+            overflow: hidden;
+            z-index: -1;
+    
+            div{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+    
+                &:nth-child(1){
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+                    background: $dark;
+                    z-index: 50;
+                    top: -1px; //Fixes 1px white line
+                }
+    
+                &:nth-child(2){
+                    //clip-path: polygon(0 16%, 0 0, 86% 0);
+                    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+                    background: lighten($dark, 33.3%);
+                    z-index: 40;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.animate{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}

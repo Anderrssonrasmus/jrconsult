@@ -1,0 +1,157 @@
+@import "variables";
+
+.tilt{
+    width: 100%;
+    height: fit-content;
+    padding: 0 2em;
+    background: $white;
+    position: relative;
+    z-index: 10;
+    padding: 10em 2em;
+
+    .tilt-inner{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15em;
+
+        .option{
+            width: 20em;
+            height: 70vh;
+            transition: all 0.2s ease;
+            position: relative;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px;
+
+            .img{
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20em;
+                height: 100%;
+                z-index: 50;
+            }
+
+            &:hover{
+                width: 40em;
+            }
+
+            &:after{
+                content:"";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                pointer-events: none;
+            }
+
+            &:nth-child(1){
+                transform: translateY(20%);
+
+                .img{
+                    background-image: url(../img/pexels-cottonbro-4107120s.jpg);
+                }
+            }
+
+            &:nth-child(2){
+                margin: 0 2em;
+
+                .img{
+                    background-image: url(../img/pexels-ketut-subiyanto-4247770s.jpg);
+                }
+            }
+
+            &:nth-child(3){
+                transform: translateY(40%);
+
+                .img{
+                    background-image: url(../img/pexels-athena-2582937s.jpg);
+                }
+            }
+
+            .desc{
+                height: 100%;
+                width: 20em;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $white;
+                padding: 2em;
+                //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                h4{
+                    font-size: 3rem;
+                    font-family: "open sans";
+                    font-weight: 300;
+                    z-index: 20;
+                    color: $dark;
+                    transition: all 0.2s ease;
+                }
+
+                p{
+                    font-size: 1rem;
+                    font-family: "open sans";
+                    font-weight: 400;
+                    color: $dark;
+                }
+
+                button{
+                    position: absolute;
+                    bottom: 10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #00000000;
+                    //border: 1px solid #111111;
+                    //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    color: $dark;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    margin: 0;
+                    outline: none;
+                    padding: 1em 2em;
+                    text-align: center;
+                    text-decoration: none;
+                    touch-action: manipulation;
+                    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    width: auto;
+
+                    &:focus-visible {
+                        //box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+                        transition: box-shadow .2s;
+                    }
+
+                    &:active {
+                        background-color: #F7F7F7;
+                        //border-color: #000000;
+                        transform: scale(.96);
+                    }
+
+                    &:disabled {
+                        //border-color: #DDDDDD;
+                        color: #DDDDDD;
+                        cursor: not-allowed;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

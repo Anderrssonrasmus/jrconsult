@@ -1,0 +1,45 @@
+@import "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 100%;
+    //overflow-x: hidden;
+}
+
+.wrap{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.jr{
+    font-family: Comforter;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 0 5em 0;
+    color: $dark;
+
+    h2{
+        font-size: 1.5rem;
+        font-family: "montserrat";
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 3rem;
+        font-family: "open sans";
+        font-weight: 800;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');

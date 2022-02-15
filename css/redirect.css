@@ -1,0 +1,75 @@
+.preloader {
+  content: "";
+  background: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-animation: slideOut 2s linear;
+          animation: slideOut 2s linear;
+  visibility: hidden;
+  z-index: 99999999999;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.preloader h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.bounceout {
+  -webkit-animation: slideIn 1s ease;
+          animation: slideIn 1s ease;
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=redirect.css.map */
