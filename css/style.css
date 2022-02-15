@@ -932,6 +932,7 @@ body {
 .wrap {
   width: 100%;
   overflow-x: hidden;
+  background: #fffdff;
 }
 
 .jr {
