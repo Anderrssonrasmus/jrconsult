@@ -403,132 +403,295 @@
   background: #fffdff !important;
 }
 
-main {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  margin-top: 5em;
-  background: #fffdff;
-  position: relative;
-  z-index: 10;
+@media screen and (max-width: 992px) {
+  main {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin-top: 5em;
+    background: #fffdff;
+    position: relative;
+    z-index: 10;
+  }
+  main .hero {
+    width: 100%;
+    height: calc(100vh - 5em);
+    position: relative;
+    pointer-events: none;
+  }
+  main .hero .textBox {
+    width: 100%;
+    height: 80%;
+    padding: 2em;
+    margin-bottom: 2em;
+    position: relative;
+    z-index: -20;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    pointer-events: all;
+  }
+  main .hero .textBox h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
+  main .hero .textBox div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: -5%;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  main .hero .textBox div i {
+    font-size: 2rem;
+    -webkit-text-stroke: 2px #fffdff;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  main .hero .textBox div:hover i {
+    color: #ff2828;
+  }
+  main .hero .textBox p {
+    font-family: "inter";
+    font-size: 9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 11rem;
+    letter-spacing: .05rem;
+  }
+  main .hero .textBox p:nth-child(2) {
+    text-align: right;
+  }
+  main .hero .textBox p:nth-child(3) {
+    text-align: center;
+  }
+  .main-section {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    z-index: 100;
+  }
+  .main-section .img-text {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding: 1em;
+    background: #111111;
+    position: relative;
+  }
+  .main-section .img-text .shadow {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    background: #111111;
+    -webkit-box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+  .main-section .img-text img {
+    width: calc(100% - 2em) !important;
+    position: absolute;
+  }
+  .main-section .img-text .text {
+    color: #fffdff;
+    width: 100%;
+    padding: 2em 1em 2.5em 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 15;
+    background: rgba(17, 17, 17, 0.9);
+  }
+  .main-section .img-text .text h2 {
+    font-size: 2rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
+  .main-section .img-text .text p {
+    font-size: 1rem;
+    font-family: "montserrat";
+    line-height: 1.5;
+  }
+  .main-section .img-text .text p:nth-child(2) {
+    margin-bottom: 4em;
+  }
+  .main-section .fader {
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    margin-top: -2px;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+    margin-bottom: 5em;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .main-section .fader div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .main-section .fader div:nth-child(1) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+    background: #111111;
+    z-index: 50;
+    top: -1px;
+  }
+  .main-section .fader div:nth-child(2) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+    background: #666666;
+    z-index: 40;
+    bottom: 0;
+  }
 }
 
-main .three {
-  width: 100%;
-  height: calc(100vh - 5em);
-  position: relative;
-  pointer-events: none;
+@media screen and (min-width: 992px) {
+  main {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin-top: 5em;
+    background: #fffdff;
+    position: relative;
+    z-index: 10;
+  }
+  main .hero {
+    width: 100%;
+    height: calc(100vh - 5em);
+    position: relative;
+    pointer-events: none;
+  }
+  main .hero .textBox {
+    width: 100%;
+    height: 80%;
+    padding: 2em;
+    margin-bottom: 2em;
+    position: relative;
+    z-index: -20;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    pointer-events: all;
+  }
+  main .hero .textBox h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
+  main .hero .textBox div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: -5%;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  main .hero .textBox div i {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px #fffdff;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  main .hero .textBox div:hover i {
+    color: #ff2828;
+  }
+  main .hero .textBox p {
+    font-family: "inter";
+    font-size: 9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 11rem;
+    letter-spacing: .05rem;
+  }
+  main .hero .textBox p:nth-child(2) {
+    text-align: right;
+  }
+  main .hero .textBox p:nth-child(3) {
+    text-align: center;
+  }
+  main .main-section {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    z-index: 100;
+  }
+  main .main-section .img-text {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 4em;
+    background: #111111;
+    position: relative;
+  }
+  main .main-section .img-text .shadow {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    background: #111111;
+    -webkit-box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+  main .main-section .img-text img {
+    width: 30%;
+  }
 }
 
-main .three .textBox {
-  width: 100%;
-  height: 80%;
-  padding: 2em;
-  margin-bottom: 2em;
-  position: relative;
-  z-index: -20;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  pointer-events: all;
-}
-
-main .three .textBox h2 {
-  font-size: 3rem;
-  font-family: "open sans";
-  font-weight: 800;
-}
-
-main .three .textBox div {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: absolute;
-  bottom: -5%;
-  z-index: 10;
-  opacity: 0;
-  -webkit-transform: translateY(-20%);
-          transform: translateY(-20%);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-main .three .textBox div i {
-  font-size: 3rem;
-  -webkit-text-stroke: 2px #fffdff;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-main .three .textBox div:hover i {
-  color: #ff2828;
-}
-
-main .three .textBox p {
-  font-family: "inter";
-  font-size: 9rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  line-height: 11rem;
-  letter-spacing: .05rem;
-}
-
-main .three .textBox p:nth-child(2) {
-  text-align: right;
-}
-
-main .three .textBox p:nth-child(3) {
-  text-align: center;
-}
-
-main .main-section {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  z-index: 100;
-}
-
-main .main-section .img-text {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 4em;
-  background: #111111;
-  position: relative;
-}
-
-main .main-section .img-text .shadow {
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  top: 0;
-  background: #111111;
-  -webkit-box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px -5px 25px 5px rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-
-main .main-section .img-text img {
-  width: 30%;
-}
-
-@media screen and (max-width: 1630px) {
+@media screen and (min-width: 992px) and (max-width: 1630px) {
   main .main-section .img-text img {
     width: 40%;
   }
@@ -537,67 +700,62 @@ main .main-section .img-text img {
   }
 }
 
-main .main-section .img-text .text {
-  color: #fffdff;
-  width: 40%;
-  padding: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-main .main-section .img-text .text h2 {
-  font-size: 3rem;
-  font-family: "open sans";
-  font-weight: 800;
-}
-
-main .main-section .img-text .text p {
-  font-size: 1.5rem;
-  font-family: "montserrat";
-  line-height: 1.5;
-}
-
-main .main-section .img-text .text p:nth-child(2) {
-  margin-bottom: 4em;
-}
-
-main .main-section .fader {
-  height: 20vh;
-  width: 100%;
-  position: relative;
-  margin-top: -2px;
-  -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-  margin-bottom: 5em;
-  overflow: hidden;
-  z-index: -1;
-}
-
-main .main-section .fader div {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-main .main-section .fader div:nth-child(1) {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
-  background: #111111;
-  z-index: 50;
-  top: -1px;
-}
-
-main .main-section .fader div:nth-child(2) {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
-  background: #666666;
-  z-index: 40;
-  bottom: 0;
+@media screen and (min-width: 992px) {
+  main .main-section .img-text .text {
+    color: #fffdff;
+    width: 40%;
+    padding: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .main-section .img-text .text h2 {
+    font-size: 3rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
+  main .main-section .img-text .text p {
+    font-size: 1.5rem;
+    font-family: "montserrat";
+    line-height: 1.5;
+  }
+  main .main-section .img-text .text p:nth-child(2) {
+    margin-bottom: 4em;
+  }
+  main .main-section .fader {
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    margin-top: -2px;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+    margin-bottom: 5em;
+    overflow: hidden;
+    z-index: -1;
+  }
+  main .main-section .fader div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  main .main-section .fader div:nth-child(1) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+    background: #111111;
+    z-index: 50;
+    top: -1px;
+  }
+  main .main-section .fader div:nth-child(2) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+    background: #666666;
+    z-index: 40;
+    bottom: 0;
+  }
 }
 
 .animate {
