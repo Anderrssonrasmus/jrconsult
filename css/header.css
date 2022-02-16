@@ -5,7 +5,7 @@
     background: #fffdff;
     padding: 0 1em;
     position: fixed;
-    top: 0;
+    bottom: 100%;
     z-index: 999999999;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
