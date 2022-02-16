@@ -47,5 +47,25 @@ body{
     }
 }
 
+@media screen and (max-width: 992px){
+    .heading{
+        text-align: center;
+        margin: 0 0 5em 0;
+        color: $dark;
+    
+        h2{
+            font-size: 1rem;
+            font-family: "montserrat";
+            font-weight: 400;
+        }
+    
+        p{
+            font-size: 2rem;
+            font-family: "open sans";
+            font-weight: 800;
+        }
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');

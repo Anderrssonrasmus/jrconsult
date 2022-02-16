@@ -1082,107 +1082,197 @@
   }
 }
 
-.parallax-container {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  position: relative;
-  z-index: 40;
-  background: #111111;
-  padding-top: 5em;
+@media screen and (max-width: 992px) {
+  .parallax-container {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: relative;
+    z-index: 40;
+    background: #111111;
+    padding-top: 5em;
+  }
+  .parallax-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffdff;
+  }
+  .parallax-container .inner {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+  }
+  .parallax-container .inner .parallax {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+    z-index: 5;
+  }
+  .parallax-container .inner .parallax:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .parallax-container .inner .parallax canvas {
+    height: 100% !important;
+  }
+  .parallax-container .inner .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+  }
+  .parallax-container .inner .text-box h5 {
+    font-size: 4rem;
+    color: #fffdff;
+  }
+  .parallax-container .inner .text-box .consult {
+    font-family: "open sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fffdff;
+  }
+  .parallax-container .inner .text-box .desc {
+    font-family: "montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fffdff;
+    text-align: center;
+  }
 }
 
-.parallax-container:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #fffdff;
-}
-
-.parallax-container .inner {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-}
-
-.parallax-container .inner .parallax {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
-          clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
-  z-index: 5;
-}
-
-.parallax-container .inner .parallax:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.parallax-container .inner .parallax canvas {
-  height: 100% !important;
-}
-
-.parallax-container .inner .text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  z-index: 10;
-}
-
-.parallax-container .inner .text-box h5 {
-  font-size: 5rem;
-  color: #fffdff;
-}
-
-.parallax-container .inner .text-box .consult {
-  font-family: "open sans";
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 3rem;
-  color: #fffdff;
-}
-
-.parallax-container .inner .text-box .desc {
-  font-family: "montserrat";
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fffdff;
+@media screen and (min-width: 992px) {
+  .parallax-container {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: relative;
+    z-index: 40;
+    background: #111111;
+    padding-top: 5em;
+  }
+  .parallax-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffdff;
+  }
+  .parallax-container .inner {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+  }
+  .parallax-container .inner .parallax {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+    z-index: 5;
+  }
+  .parallax-container .inner .parallax:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .parallax-container .inner .parallax canvas {
+    height: 100% !important;
+  }
+  .parallax-container .inner .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+  }
+  .parallax-container .inner .text-box h5 {
+    font-size: 5rem;
+    color: #fffdff;
+  }
+  .parallax-container .inner .text-box .consult {
+    font-family: "open sans";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fffdff;
+  }
+  .parallax-container .inner .text-box .desc {
+    font-family: "montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fffdff;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1516,5 +1606,23 @@ body.menu-open {
   font-size: 3rem;
   font-family: "open sans";
   font-weight: 800;
+}
+
+@media screen and (max-width: 992px) {
+  .heading {
+    text-align: center;
+    margin: 0 0 5em 0;
+    color: #111111;
+  }
+  .heading h2 {
+    font-size: 1rem;
+    font-family: "montserrat";
+    font-weight: 400;
+  }
+  .heading p {
+    font-size: 2rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
 }
 /*# sourceMappingURL=style.css.map */

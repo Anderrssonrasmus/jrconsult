@@ -46,4 +46,22 @@ body.menu-open {
   font-family: "open sans";
   font-weight: 800;
 }
+
+@media screen and (max-width: 992px) {
+  .heading {
+    text-align: center;
+    margin: 0 0 5em 0;
+    color: #111111;
+  }
+  .heading h2 {
+    font-size: 1rem;
+    font-family: "montserrat";
+    font-weight: 400;
+  }
+  .heading p {
+    font-size: 2rem;
+    font-family: "open sans";
+    font-weight: 800;
+  }
+}
 /*# sourceMappingURL=basic.css.map */
