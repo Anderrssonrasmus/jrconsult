@@ -5,7 +5,7 @@
     background: #fffdff;
     padding: 0 1em;
     position: fixed;
-    bottom: 100%;
+    top: 0;
     z-index: 999999999;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -38,7 +38,6 @@
     text-decoration: none;
   }
   header .header-inner .menu {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
