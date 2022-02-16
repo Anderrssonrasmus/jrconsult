@@ -124,7 +124,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     z-index: 15;
-    background: rgba(17, 17, 17, 0.9);
+    background: rgba(17, 17, 17, 0.8);
   }
   .main-section .img-text .text h2 {
     font-size: 2rem;
