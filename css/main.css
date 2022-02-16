@@ -111,6 +111,7 @@
   .main-section .img-text img {
     width: calc(100% - 2em) !important;
     position: absolute;
+    display: none;
   }
   .main-section .img-text .text {
     color: #fffdff;
