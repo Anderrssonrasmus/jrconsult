@@ -1,88 +1,222 @@
 @import "variables";
 
 @media screen and (max-width: 992px){ //Mobile breakpoint
-    
-}
-header{
-    width: 100%;
-    height: 5em;
-    padding: 0 2em;
-    position: fixed;
-    top: 0;
-    background: $white;
-    background-blend-mode: color-burn;
-    z-index: 99999999;
-    transition: all 0.2s ease;
+    header{
+        width: 100%;
+        height: 5em;
+        background: $white;
+        padding: 0 1em;
+        position: fixed;
+        top: 0;
+        z-index: 999999999;
+        transition: all 0.2s ease;
 
-     .header-inner{
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         justify-content: space-between;
-         width: 100%;
-         height: 100%;
-         border-bottom: 1px solid $black;
+        .header-inner{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $dark;
 
-         .logo{
-             height: fit-content;
-             font-family: Comforter;
+            .logo{
+                width: fit-content;
+                height: fit-content;
 
-             a{
-                 color: $black;
-                 text-decoration: none;
-                 font-size: 2.5rem;
-                 transition: all 0.2s ease;
-             }
+                a{
+                    font-size: 2.5rem;
+                    color: $dark;
+                    text-decoration: none;
+                }
+            }
 
-             &:hover a{
-                 color: $red !important;
-             }
-         }
+            .menu{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 5em);
+                background: $white;
+                padding: 2em;
+                transition: all 0.5s ease-in-out;
 
-         .burger{
-             display: none;
-         }
-         
-         .menu{
-            height: fit-content;
-            ul{
-                list-style-type: none;
-                display: flex;
-                flex: 1;
+                transform: translateX(-100%);
 
-                li{
-                    margin: 0 1em 0 0;
-                    font-family: montserrat;
-                    font-size: 1.25rem;
-                    position: relative;
-                    overflow: hidden;
+                &.open{
+                    transform: translateX(0%);
+                }
 
-                    &:after{
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        height: 1px;
-                        left: -100%;
-                        transition: 0.2s ease;
-                        background: $black;
-                    }
-
-                    &:hover:after{
-                        background: $red;
-                        left: 0;
-                    }
-
+                &.dark{
                     a{
-                        text-decoration: none;
-                        color: $black;
-                        font-weight: 400;
+                        color: $dark;
+                    }
+                }
+
+                ul{
+                    width: fit-content;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    list-style: none;
+
+                    li{
+                        width: fit-content;
+                        height: fit-content;
+                        margin: 1em 0;
+
+                        a{
+                            font-size: 2rem;
+                            font-family: "montserrat";
+                            font-weight: 400;
+                            color: $dark;
+                            text-decoration: none;
+                        }
                     }
                 }
             }
-         }
-     }
+
+            .burger{
+                width: 2.5em;
+                height: 2.5em;
+                background: none;
+                outline: none;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                position: relative;
+
+                &.open{
+                    span{
+                        position: absolute;
+                        top: 50% !important;
+                        //left: 50% !important;
+
+                        &:nth-child(1){
+                            width: 100% !important;
+                            transform: rotate(45deg); //translate(-50%, -50%);
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:nth-child(3){
+                            width: 100% !important;
+                            transform: rotate(-45deg); //translate(-50%, -50%);
+                        }
+                    }
+                }
+
+                span{
+                    width: 100%;
+                    height: 2px;
+                    background: $dark;
+                    border-radius: 5em;
+                    transition: all 0.5s ease;
+                    position: absolute;
+
+                    &:nth-child(1){
+                        width: 50% !important;
+                        //align-self: flex-start;
+                        top: 0;
+                    }
+
+                    &:nth-child(3){
+                        width: 50% !important;
+                        //align-self: flex-end;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
+
+@media screen and (min-width: 992px) {
+    header{
+        width: 100%;
+        height: 5em;
+        padding: 0 2em;
+        position: fixed;
+        top: 0;
+        background: $white;
+        background-blend-mode: color-burn;
+        z-index: 99999999;
+        transition: all 0.2s ease;
+    
+         .header-inner{
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             justify-content: space-between;
+             width: 100%;
+             height: 100%;
+             border-bottom: 1px solid $dark;
+    
+             .logo{
+                 height: fit-content;
+                 font-family: Comforter;
+    
+                 a{
+                     color: $dark;
+                     text-decoration: none;
+                     font-size: 2.5rem;
+                     transition: all 0.2s ease;
+                 }
+    
+                 &:hover a{
+                     color: $red !important;
+                 }
+             }
+    
+             .burger{
+                 display: none;
+             }
+             
+             .menu{
+                height: fit-content;
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex: 1;
+    
+                    li{
+                        margin: 0 1em 0 0;
+                        font-family: montserrat;
+                        font-size: 1.25rem;
+                        position: relative;
+                        overflow: hidden;
+    
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            height: 1px;
+                            left: -100%;
+                            transition: 0.2s ease;
+                            background: $dark;
+                        }
+    
+                        &:hover:after{
+                            background: $red;
+                            left: 0;
+                        }
+    
+                        a{
+                            text-decoration: none;
+                            color: $dark;
+                            font-weight: 400;
+                        }
+                    }
+                }
+             }
+         }
+    }
+}
+
 
 .dark{
     background: $dark !important;
@@ -96,8 +230,19 @@ header{
             }
         }
 
-        .menu a{
-            color: $white !important;
+        .menu{
+
+            @media screen and (max-width: 992px) {
+                background: $dark;
+            }
+
+            a{
+                color: $white !important;
+            }
+        }
+
+        .burger span{
+            background: $white !important;
         }
     }
 
