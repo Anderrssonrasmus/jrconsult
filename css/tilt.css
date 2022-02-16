@@ -154,7 +154,7 @@
   }
 }
 
-@media screen and (m-width: 992px) {
+@media screen and (min-width: 992px) {
   .tilt {
     width: 100%;
     height: -webkit-fit-content;
