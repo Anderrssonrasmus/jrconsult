@@ -273,6 +273,10 @@
     width: 50% !important;
     top: 0;
   }
+  header .header-inner .burger span:nth-child(2) {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
   header .header-inner .burger span:nth-child(3) {
     width: 50% !important;
     bottom: 0;
