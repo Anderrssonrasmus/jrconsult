@@ -27,6 +27,11 @@
                 text-decoration: none;
             }
 
+            img{
+                height: 100%;
+                width: auto;
+            }
+
             h1{
                 margin: 0.25em 0;
             }
@@ -78,6 +83,11 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
+            }
+
+            img{
+                height: 80%;
+                width: auto;
             }
     
             p, a{

@@ -35,6 +35,7 @@
                 position: relative;
                 margin: 2em 0;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                filter: grayscale(100%);
     
                 &:after{
                     content: "";
@@ -125,6 +126,7 @@
                 position: relative;
                 margin: 0 2em;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                filter: grayscale(100%);
     
                 &:after{
                     content: "";

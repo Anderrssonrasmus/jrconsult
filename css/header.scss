@@ -20,13 +20,21 @@
             border-bottom: 1px solid $dark;
 
             .logo{
+                /*width: fit-content;
+                height: fit-content;*/
+
+                height: 100%;
                 width: fit-content;
-                height: fit-content;
 
                 a{
                     font-size: 2.5rem;
                     color: $dark;
                     text-decoration: none;
+                }
+
+                img{
+                    height: 100%;
+                    width: auto;
                 }
             }
 
@@ -34,7 +42,7 @@
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                height: calc(100vh - 5em);
+                height: calc(100% - 5em);
                 background: $white;
                 padding: 2em;
                 transition: all 0.5s ease-in-out;
@@ -159,8 +167,11 @@
              border-bottom: 1px solid $dark;
     
              .logo{
-                 height: fit-content;
+                 height: 100%;
                  font-family: Comforter;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
     
                  a{
                      color: $dark;
@@ -171,6 +182,12 @@
     
                  &:hover a{
                      color: $red !important;
+                 }
+
+                 img{
+                     width: auto;
+                     height: 80%;
+                     object-fit: cover;
                  }
              }
     

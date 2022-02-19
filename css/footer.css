@@ -35,6 +35,10 @@
     color: #000;
     text-decoration: none;
   }
+  footer .footer-inner img {
+    height: 100%;
+    width: auto;
+  }
   footer .footer-inner h1 {
     margin: 0.25em 0;
   }
@@ -92,6 +96,10 @@
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  footer .footer-inner img {
+    height: 80%;
+    width: auto;
   }
   footer .footer-inner p, footer .footer-inner a {
     font-family: montserrat;

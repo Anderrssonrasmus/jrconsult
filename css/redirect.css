@@ -20,6 +20,13 @@
   font-size: 5rem;
 }
 
+.preloader img {
+  width: 10%;
+  height: auto;
+  -webkit-transform: translateZ(0%);
+          transform: translateZ(0%);
+}
+
 @-webkit-keyframes slideIn {
   from {
     right: -100%;
