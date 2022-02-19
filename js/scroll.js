@@ -25,7 +25,7 @@ function getOffset(el) {
 window.addEventListener("scroll", () => {
     document.querySelectorAll(".section").forEach(element => {
 
-        console.log(element.classList, getOffset(element).top, rgba2hex(window.getComputedStyle(element, null).getPropertyValue('background-color')));
+        //console.log(element.classList, getOffset(element).top, rgba2hex(window.getComputedStyle(element, null).getPropertyValue('background-color')));
 
         if (getOffset(element).top < 18 * 5 && rgba2hex(window.getComputedStyle(element, null).getPropertyValue('background-color')) == "#111111") {
             document.querySelector(".header").classList.add("dark");
