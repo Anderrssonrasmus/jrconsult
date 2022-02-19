@@ -79,6 +79,10 @@
     font-size: 4rem;
     color: #fffdff;
   }
+  .parallax-container .inner .text-box img {
+    width: 70%;
+    height: auto;
+  }
   .parallax-container .inner .text-box .consult {
     font-family: "open sans";
     font-weight: 800;
