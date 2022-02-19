@@ -220,12 +220,12 @@
     top: 5em;
     left: 0;
     width: 100%;
-    height: calc(100% - 5em);
+    height: calc(100vh - 5em);
     background: #fffdff;
     padding: 2em;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    position: fixed;
+    position: absolute;
     -webkit-transform: translateX(-150%);
             transform: translateX(-150%);
   }

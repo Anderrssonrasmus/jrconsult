@@ -44,11 +44,11 @@
                 top: 5em;
                 left: 0;
                 width: 100%;
-                height: calc(100% - 5em);
+                height: calc(100vh - 5em);
                 background: $white;
                 padding: 2em;
                 transition: all 0.5s ease-in-out;
-                position: fixed;
+                position: absolute;
 
                 transform: translateX(-150%);
 
