@@ -621,7 +621,7 @@
     height: -moz-fit-content;
     height: fit-content;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 50%;
     z-index: 10100;
     opacity: 0;
@@ -1168,7 +1168,7 @@
     background: #fffdff;
     position: relative;
     z-index: 10;
-    padding: 5em 1em;
+    padding: 3em 0 5em 0;
   }
   .tilt .tilt-inner {
     width: 100%;
