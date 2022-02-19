@@ -4,13 +4,6 @@ window.onload = () => {
     }, 4000)
 }
 
-document.querySelector(".scrollTop").addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
 document.querySelector(".scrollDown").addEventListener("click", () => {
     let height = window.innerHeight - 5 * 18 /*5em Header height*/;
     window.scrollTo({
