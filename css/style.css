@@ -1986,6 +1986,11 @@
   footer .footer-inner img {
     height: 80%;
     width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   footer .footer-inner p, footer .footer-inner a {
     font-family: montserrat;
