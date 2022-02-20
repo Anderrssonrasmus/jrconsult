@@ -122,17 +122,13 @@
                     height: 2px;
                     background: $dark;
                     border-radius: 5em;
-                    transition: all 0.5s ease;
+                    transition: all 0.2s ease;
                     position: absolute;
 
                     &:nth-child(1){
                         width: 50% !important;
                         //align-self: flex-start;
                         top: 0;
-                    }
-
-                    &:nth-child(2){
-                        transition: all 0.2s ease;
                     }
 
                     &:nth-child(3){
@@ -144,6 +140,18 @@
                 }
             }
         }
+    }
+
+    .dark img.light-logo{
+        display: block !important;
+    }
+
+    .dark img.dark-logo{
+        display: none;
+    }
+
+    .light-logo{
+        display: none;
     }
 }
 
@@ -236,6 +244,18 @@
                 }
              }
          }
+    }
+
+    .dark img.light-logo{
+        display: block !important;
+    }
+
+    .dark img.dark-logo{
+        display: none;
+    }
+
+    .light-logo{
+        display: none;
     }
 }
 
