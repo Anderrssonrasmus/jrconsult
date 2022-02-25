@@ -168,6 +168,65 @@
         position: relative;
         z-index: 10;
         padding: 10em 2em;
+
+        div:nth-child(2){
+            width: fit-content;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0; 
+            overflow-x: scroll;
+
+            article{
+                width: 35em;
+                height: 20em;
+                display: flex;
+                flex-direction: row;
+                background: $white;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 2em;
+                border-radius: 0.5em;
+                margin: 3em;
+
+                div:nth-child(1){
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 2em;
+
+                    i{
+                        font-size: 5rem;
+                        color: $dark;
+                    }
+                }
+
+                div:nth-child(2){
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    font-family: "montserrat";
+
+                    h3{
+                        font-size: 1.5rem;
+                        color: $dark;
+                        font-weight: bold;
+                        text-align: start;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p{
+                        font-size: 1.5rem;
+                        color: $dark;
+                    }
+                }
+            }
+        }
     
         .tilt-inner{
             width: 100%;
