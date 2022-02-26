@@ -1683,6 +1683,9 @@
     -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
             clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
     z-index: 5;
+    position: absolute !important;
+    top: 0;
+    left: 0;
   }
   .parallax-container .inner .parallax:after {
     content: "";
@@ -1757,23 +1760,7 @@
     height: 100%;
     background: #fffdff;
   }
-  .parallax-container .inner {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-  }
-  .parallax-container .inner .parallax {
+  .parallax-container .parallax {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1785,7 +1772,7 @@
             clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
     z-index: 5;
   }
-  .parallax-container .inner .parallax:after {
+  .parallax-container .parallax:after {
     content: "";
     position: absolute;
     right: 0;
@@ -1793,27 +1780,52 @@
     width: 100%;
     height: 100%;
   }
-  .parallax-container .inner .parallax canvas {
+  .parallax-container .parallax canvas {
     height: 100% !important;
   }
-  .parallax-container .inner .text-box {
+  .parallax-container .inner {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+    z-index: 100;
+    padding: 0 2em;
+  }
+  .parallax-container .inner .text-box {
+    width: 20%;
+    height: 100%;
     display: -ms-grid;
     display: grid;
     place-items: center;
     z-index: 10;
+    margin: 2em;
+    background: #111111;
+    padding: 2em;
+    border-radius: 5px;
+    border: 1px solid #fffdff;
   }
   .parallax-container .inner .text-box h5 {
     font-size: 5rem;
     color: #fffdff;
   }
   .parallax-container .inner .text-box img {
-    width: 20%;
+    width: 60%;
     height: auto;
+    margin-bottom: 2em;
   }
   .parallax-container .inner .text-box .consult {
     font-family: "open sans";
@@ -1824,9 +1836,30 @@
   }
   .parallax-container .inner .text-box .desc {
     font-family: "montserrat";
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #fffdff;
+  }
+  .parallax-container .inner .wrapper {
+    width: 40% !important;
+    height: 100% !important;
+    background: #111111 !important;
+    border: 1px solid #fffdff;
+    padding: 2em;
+    margin: 2em;
+  }
+  .parallax-container .inner .wrapper form {
+    margin: 0;
+  }
+  .parallax-container .inner .wrapper input, .parallax-container .inner .wrapper textarea, .parallax-container .inner .wrapper button, .parallax-container .inner .wrapper span {
+    font-family: "montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    background: #111111 !important;
+    color: #fffdff !important;
+  }
+  .parallax-container .inner .wrapper button {
+    border: 1px solid #fffdff;
   }
 }
 
