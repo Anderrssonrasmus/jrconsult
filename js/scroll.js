@@ -49,3 +49,45 @@ function myFunction() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("scrollbar").style.height = scrolled + "%";
 }
+
+
+
+
+
+document.querySelectorAll(".arrow").forEach(element => {
+    const scroller = document.querySelector(".scroller");
+    let width = window.innerWidth * 0.4;
+
+    console.log(element, width);
+
+    element.addEventListener("click", () => {
+        if (element.classList.contains("scroll-left")) {
+            scroller.scrollLeft = scroller.scrollLeft - width;
+            console.log(element, scroller.scrollLeft - width);
+
+            if (scroller.scrollLeft - width <= 0) {
+                console.log("left invisible");
+                document.querySelector(".scroll-left").classList.add("hidden");
+            } else {
+                document.querySelector(".scroll-left").classList.remove("hidden");
+            }
+
+            document.querySelector(".scroll-right").classList.remove("hidden");
+        }
+
+        if (element.classList.contains("scroll-right")) {
+            scroller.scrollLeft = scroller.scrollLeft + width;
+            console.log(element, scroller.scrollLeft + width);
+
+            if (scroller.scrollLeft + width >= width * 2) {
+                console.log("right invisible");
+                document.querySelector(".scroll-right").classList.add("hidden");
+            } else {
+                document.querySelector(".scroll-right").classList.remove("hidden");
+            }
+
+            document.querySelector(".scroll-left").classList.remove("hidden");
+
+        }
+    });
+})

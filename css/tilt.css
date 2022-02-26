@@ -160,33 +160,87 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 0 2em;
     background: #fffdff;
     position: relative;
     z-index: 10;
     padding: 10em 2em;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .tilt div:nth-child(2) {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  .tilt .scroller {
+    width: 80vw;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40vw;
+    overflow-x: auto;
+    -ms-scroll-snap-type: inline mandatory;
+        scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 3em;
+  }
+  .tilt .scroller > * {
+    scroll-snap-align: start;
+  }
+  .tilt .scroller:before {
+    position: absolute;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0;
-    overflow-x: scroll;
+    width: 10%;
+    top: 0;
+    right: 0;
   }
-  .tilt div:nth-child(2) article {
-    width: 35em;
-    height: 20em;
+  .tilt .scroller:after {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    background: -webkit-gradient(linear, right top, left top, from(#00000000), to(#ffffff));
+    background: linear-gradient(to left, #00000000, #ffffff);
+    top: 0;
+    left: 0;
+  }
+  .tilt .scroller::-webkit-scrollbar {
+    display: block;
+    height: 10px;
+    z-index: 9999999;
+  }
+  .tilt .scroller::-webkit-scrollbar-track {
+    background: #fffdff;
+  }
+  .tilt .scroller::-webkit-scrollbar-thumb {
+    background: #111111;
+    border-radius: 0.5em;
+  }
+  .tilt .scroller .arrow {
+    position: absolute;
+    top: 54%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .tilt .scroller .arrow.scroll-right {
+    right: 4em;
+  }
+  .tilt .scroller .arrow.scroll-left {
+    left: 4em;
+  }
+  .tilt .scroller .arrow.hidden {
+    opacity: 0;
+  }
+  .tilt .scroller .arrow i {
+    -webkit-text-stroke: 0.2rem #fffdff;
+    font-size: 5rem;
+    color: #111111;
+  }
+  .tilt .scroller article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -194,14 +248,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background: #fffdff;
+    background: #111111;
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 2em;
     border-radius: 0.5em;
-    margin: 3em;
+    margin: 3em 3em 8em 3em;
   }
-  .tilt div:nth-child(2) article div:nth-child(1) {
+  .tilt .scroller article div:nth-child(1) {
     width: 40%;
     height: 100%;
     display: -webkit-box;
@@ -219,11 +273,11 @@
             justify-content: center;
     margin-right: 2em;
   }
-  .tilt div:nth-child(2) article div:nth-child(1) i {
+  .tilt .scroller article div:nth-child(1) i {
     font-size: 5rem;
-    color: #111111;
+    color: #fffdff;
   }
-  .tilt div:nth-child(2) article div:nth-child(2) {
+  .tilt .scroller article div:nth-child(2) {
     width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -240,16 +294,16 @@
             justify-content: flex-start;
     font-family: "montserrat";
   }
-  .tilt div:nth-child(2) article div:nth-child(2) h3 {
+  .tilt .scroller article div:nth-child(2) h3 {
     font-size: 1.5rem;
-    color: #111111;
+    color: #fffdff;
     font-weight: bold;
     text-align: start;
     margin-bottom: 0.5em;
   }
-  .tilt div:nth-child(2) article div:nth-child(2) p {
+  .tilt .scroller article div:nth-child(2) p {
     font-size: 1.5rem;
-    color: #111111;
+    color: #fffdff;
   }
   .tilt .tilt-inner {
     width: 100%;
