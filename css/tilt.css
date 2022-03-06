@@ -176,12 +176,74 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .tilt .tilt-inner {
+    width: 100%;
+  }
+  .tilt .tilt-inner .job {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .tilt .tilt-inner .job::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(white));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, white 100%);
+    z-index: 100;
+  }
+  .tilt .tilt-inner .job div:nth-child(1) {
+    background: #fffdff;
+    width: 40%;
+    height: 100%;
+    padding: 2em;
+    position: relative;
+    z-index: 50;
+  }
+  .tilt .tilt-inner .job div:nth-child(1) h3 {
+    font-size: 1.5rem;
+    font-family: "open sans";
+    font-weight: bold;
+  }
+  .tilt .tilt-inner .job div:nth-child(1) p {
+    font-size: 1.5rem;
+    font-family: "open sans";
+    font-weight: 400;
+  }
+  .tilt .tilt-inner .job .tilted {
+    background-image: url(../img/pexels-athena-2582937.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .tilt .scroller {
     width: 80vw;
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 40vw;
+    grid-auto-columns: 50vw;
     overflow-x: auto;
     -ms-scroll-snap-type: inline mandatory;
         scroll-snap-type: inline mandatory;
@@ -248,11 +310,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background: #111111;
+    background: #fffdff;
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 2em;
     border-radius: 0.5em;
+    border: 1px solid #111111;
     margin: 3em 3em 8em 3em;
   }
   .tilt .scroller article div:nth-child(1) {
@@ -275,7 +338,7 @@
   }
   .tilt .scroller article div:nth-child(1) i {
     font-size: 5rem;
-    color: #fffdff;
+    color: #111111;
   }
   .tilt .scroller article div:nth-child(2) {
     width: 60%;
@@ -296,14 +359,14 @@
   }
   .tilt .scroller article div:nth-child(2) h3 {
     font-size: 1.5rem;
-    color: #fffdff;
+    color: #111111;
     font-weight: bold;
     text-align: start;
     margin-bottom: 0.5em;
   }
   .tilt .scroller article div:nth-child(2) p {
     font-size: 1.5rem;
-    color: #fffdff;
+    color: #111111;
   }
   .tilt .tilt-inner {
     width: 100%;

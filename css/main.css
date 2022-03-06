@@ -446,8 +446,8 @@
     font-weight: bold;
   }
   main .hero .container .one img {
-    width: 30em;
-    height: auto;
+    width: auto;
+    height: 90%;
   }
   main .hero .container .two {
     position: absolute;

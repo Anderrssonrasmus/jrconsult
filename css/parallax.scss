@@ -155,7 +155,8 @@
     
         .inner{
             width: 100%;
-            height: fit-content;
+            height: 45%;
+            min-height: 415px;
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -167,7 +168,8 @@
             padding: 0 2em;
     
             .text-box{
-                width: 20%;
+                min-width: 20%;
+                max-width: 30%;
                 height: 100%;
                 display: grid;
                 place-items: center;
@@ -184,7 +186,7 @@
                 }
 
                 img{
-                    width: 60%;
+                    max-width: 160px;
                     height: auto;
                     margin-bottom: 2em;
                 }
@@ -210,6 +212,7 @@
 
             .wrapper{
                 width: 40% !important;
+                min-width: 500px;
                 height: 100% !important;
                 background: $dark !important;
                 border: 1px solid $white;

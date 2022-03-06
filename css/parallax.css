@@ -154,9 +154,8 @@
   }
   .parallax-container .inner {
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 45%;
+    min-height: 415px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -177,7 +176,8 @@
     padding: 0 2em;
   }
   .parallax-container .inner .text-box {
-    width: 20%;
+    min-width: 20%;
+    max-width: 30%;
     height: 100%;
     display: -ms-grid;
     display: grid;
@@ -194,7 +194,7 @@
     color: #fffdff;
   }
   .parallax-container .inner .text-box img {
-    width: 60%;
+    max-width: 160px;
     height: auto;
     margin-bottom: 2em;
   }
@@ -213,6 +213,7 @@
   }
   .parallax-container .inner .wrapper {
     width: 40% !important;
+    min-width: 500px;
     height: 100% !important;
     background: #111111 !important;
     border: 1px solid #fffdff;
