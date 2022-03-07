@@ -21,7 +21,7 @@
     -ms-scroll-snap-type: inline mandatory;
         scroll-snap-type: inline mandatory;
     scroll-padding-inline: 1em;
-    padding: 0 1em 0 1em;
+    padding: 1em;
   }
   .tilt .scroller > * {
     scroll-snap-align: start;

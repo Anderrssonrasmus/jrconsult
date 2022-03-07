@@ -19,7 +19,7 @@
             overflow-x: auto;
             scroll-snap-type: inline mandatory;
             scroll-padding-inline: 1em;
-            padding: 0 1em 0 1em;
+            padding: 1em;
 
             & > *{
                 scroll-snap-align: start;
