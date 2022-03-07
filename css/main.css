@@ -283,7 +283,7 @@
   .main-section .img-text .text {
     color: #fffdff;
     width: 100%;
-    padding: 2em 1em 2.5em 1em;
+    padding: 2em 0 2.5em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

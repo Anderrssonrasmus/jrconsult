@@ -3,14 +3,14 @@
 @media screen and (max-width: 992px){
     .parallax-container{
         width: 100%;
-        height: 100vh;
+        height: fit-content;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         position: relative;
         z-index: 40;
         background: $dark;
-        padding-top: 5em;
+        padding: 10em 0 5em 0;
     
         &:before{
             content:"";
@@ -21,64 +21,71 @@
             height: 100%;
             background: $white;
         }
+
+        .parallax{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            clip-path: polygon(50% 3%, 100% 0, 100% 100%, 0 100%, 0 0);
+            z-index: 5;
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            //filter: blur(4px);
+
+            &:after{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                //backdrop-filter: blur(4px);
+            }
+
+            canvas{
+                height: 100% !important;
+            }
+        }
     
         .inner{
             width: 100%;
-            height: 100%;
+            height: fit-content;
+            min-height: 415px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
-            position: relative;
             //background: $white;
             filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.70));
-    
-            .parallax{
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-attachment: fixed;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
-                z-index: 5;
-                position: absolute !important;
-                top: 0;
-                left: 0;
-                //filter: blur(4px);
-    
-                &:after{
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    //backdrop-filter: blur(4px);
-                }
-    
-                canvas{
-                    height: 100% !important;
-                }
-            }
+            z-index: 100;
+            padding: 0 1em;
     
             .text-box{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: 100%;
+                height: fit-content;
                 display: grid;
                 place-items: center;
                 z-index: 10;
+                margin: 2em;
+                background: $dark;
+                padding: 2em;
+                border-radius: 5px;
+                border: 1px solid $white;
     
                 h5{
-                    font-size: 4rem;
+                    font-size: 5rem;
                     color: $white;
                 }
 
                 img{
-                    width: 70%;
+                    max-width: 160px;
                     height: auto;
+                    margin-bottom: 2em;
                 }
     
                 .consult {
@@ -87,17 +94,41 @@
                     //font-weight: 300;
                     font-weight: 800;
                     text-transform: uppercase;
-                    font-size: 2rem;
+                    font-size: 3rem;
                     color: $white;
                 }
     
                 .desc{
                     //font-family: "open sans";
                     font-family: "montserrat";
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
                     font-weight: 400;
                     color: $white;
-                    text-align: center;
+                }
+            }
+
+            .wrapper{
+                width: 100% !important;
+                height: fit-content !important;
+                background: $dark !important;
+                border: 1px solid $white;
+                padding: 2em;
+                margin: 2em;
+
+                form{
+                    margin: 0;
+                }
+
+                input, textarea, button, span{
+                    font-family: "montserrat";
+                    font-size: 1rem;
+                    font-weight: 400;
+                    background: $dark !important;
+                    color: $white !important;
+                }
+
+                button{
+                    border: 1px solid $white;
                 }
             }
         }
@@ -137,16 +168,6 @@
             clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
             z-index: 5;
             //filter: blur(4px);
-
-            &:after{
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                //backdrop-filter: blur(4px);
-            }
 
             canvas{
                 height: 100% !important;

@@ -9,6 +9,113 @@
         position: relative;
         z-index: 10;
         padding: 3em 0 5em 0;
+
+        .scroller{
+            width: 100%;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 100%;
+            grid-gap: 2em;
+            overflow-x: auto;
+            scroll-snap-type: inline mandatory;
+            scroll-padding-inline: 1em;
+            padding: 0 1em 0 1em;
+
+            & > *{
+                scroll-snap-align: start;
+            }
+
+            &:before{
+                //content:"";
+                position: absolute;
+                height: 100%;
+                width: 10%;
+                // background: linear-gradient(to right, #00000000, #ffffff);
+                top: 0;
+                right: 0;
+            }
+
+            &:after{
+               // content:"";
+                position: absolute;
+                height: 100%;
+                width: 10%;
+                background: linear-gradient(to left, #00000000, #ffffff);
+                top: 0;
+                left: 0;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+                height: 10px;
+                z-index: 9999999;
+            }
+
+            .arrow{
+                display: none;
+            }
+
+            article{
+                display: flex;
+                flex-direction: column;
+                background: $white;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 1em;
+                border-radius: 0.5em;
+                border: 1px solid $dark;
+                //margin:3em 3em 3 + 5em 3em;
+
+                div:nth-child(1){
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1em;
+
+                    i{
+                        font-size: 3rem;
+                        color: $dark;
+                    }
+                }
+
+                div:nth-child(2){
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    font-family: "montserrat";
+
+                    h3{
+                        font-size: 1rem;
+                        color: $dark;
+                        font-weight: bold;
+                        text-align: start;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                        color: $dark;
+                    }
+                }
+            }
+        }
+
+        #scroll-indicator{
+            width: 100%;
+            height: fit-content;
+            margin: 5em 0;
+            text-align: center;
+
+            h3{
+                font-family: "open sans";
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+        }
     
         .tilt-inner{
             width: 100%;
@@ -235,7 +342,8 @@
             width: 80vw;
             display: grid;
             grid-auto-flow: column;
-            grid-auto-columns: 50vw;
+            //grid-auto-columns: 50vw;
+            grid-auto-columns: max-content;
             overflow-x: auto;
             scroll-snap-type: inline mandatory;
             scroll-padding-inline: 3em;
@@ -305,6 +413,8 @@
             }
 
             article{
+                max-width: 700px;
+                width: 35vw;
                 display: flex;
                 flex-direction: row;
                 background: $white;
@@ -324,7 +434,7 @@
                     margin-right: 2em;
 
                     i{
-                        font-size: 5rem;
+                        font-size: 4rem;
                         color: $dark;
                     }
                 }
@@ -497,6 +607,10 @@
                     }
                 }
             }
+        }
+
+        #scroll-indicator{
+            display: none;
         }
     }
 }

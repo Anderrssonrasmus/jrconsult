@@ -55,8 +55,10 @@ function myFunction() {
 
 
 document.querySelectorAll(".arrow").forEach(element => {
-    const scroller = document.querySelector(".scroller");
-    let width = window.innerWidth * 0.4;
+    let scroller = document.querySelector(".scroller");
+    let width = scroller.querySelector("article").offsetWidth;
+    let optionWidth = scroller.querySelector("article").offsetWidth;
+
 
     console.log(element, width);
 
@@ -90,4 +92,20 @@ document.querySelectorAll(".arrow").forEach(element => {
 
         }
     });
+})
+
+//Mobile side-scroller scroll indicator, Ex: 1 / 4
+
+let scroller = document.querySelector(".scroller");
+scroller.addEventListener("scroll", () => {
+
+
+    let numberOfOptions = document.querySelectorAll(".scroller article");
+    let width = scroller.offsetWidth;
+    console.log(scroller.scrollLeft / width);
+
+    let indicator = document.querySelector("#scroll-indicator h3");
+    if (scroller.scrollLeft / width + 1 % 1) {
+        indicator.textContent = parseInt(scroller.scrollLeft / width + 1) + " / " + numberOfOptions.length;
+    }
 })

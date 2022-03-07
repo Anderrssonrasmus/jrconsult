@@ -10,6 +10,126 @@
     z-index: 10;
     padding: 3em 0 5em 0;
   }
+  .tilt .scroller {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    grid-gap: 2em;
+    overflow-x: auto;
+    -ms-scroll-snap-type: inline mandatory;
+        scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1em;
+    padding: 0 1em 0 1em;
+  }
+  .tilt .scroller > * {
+    scroll-snap-align: start;
+  }
+  .tilt .scroller:before {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    right: 0;
+  }
+  .tilt .scroller:after {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    background: -webkit-gradient(linear, right top, left top, from(#00000000), to(#ffffff));
+    background: linear-gradient(to left, #00000000, #ffffff);
+    top: 0;
+    left: 0;
+  }
+  .tilt .scroller::-webkit-scrollbar {
+    display: none;
+    height: 10px;
+    z-index: 9999999;
+  }
+  .tilt .scroller .arrow {
+    display: none;
+  }
+  .tilt .scroller article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #fffdff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #111111;
+  }
+  .tilt .scroller article div:nth-child(1) {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1em;
+  }
+  .tilt .scroller article div:nth-child(1) i {
+    font-size: 3rem;
+    color: #111111;
+  }
+  .tilt .scroller article div:nth-child(2) {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-family: "montserrat";
+  }
+  .tilt .scroller article div:nth-child(2) h3 {
+    font-size: 1rem;
+    color: #111111;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0.5em;
+  }
+  .tilt .scroller article div:nth-child(2) p {
+    font-size: 1rem;
+    color: #111111;
+  }
+  .tilt #scroll-indicator {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 5em 0;
+    text-align: center;
+  }
+  .tilt #scroll-indicator h3 {
+    font-family: "open sans";
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
   .tilt .tilt-inner {
     width: 100%;
     height: -webkit-fit-content;
@@ -243,7 +363,8 @@
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 50vw;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
     overflow-x: auto;
     -ms-scroll-snap-type: inline mandatory;
         scroll-snap-type: inline mandatory;
@@ -303,6 +424,8 @@
     color: #111111;
   }
   .tilt .scroller article {
+    max-width: 700px;
+    width: 35vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -337,7 +460,7 @@
     margin-right: 2em;
   }
   .tilt .scroller article div:nth-child(1) i {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #111111;
   }
   .tilt .scroller article div:nth-child(2) {
@@ -515,6 +638,9 @@
     color: #DDDDDD;
     cursor: not-allowed;
     opacity: 1;
+  }
+  .tilt #scroll-indicator {
+    display: none;
   }
 }
 /*# sourceMappingURL=tilt.css.map */

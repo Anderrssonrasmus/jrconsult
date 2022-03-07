@@ -761,7 +761,7 @@
   .main-section .img-text .text {
     color: #fffdff;
     width: 100%;
-    padding: 2em 1em 2.5em 1em;
+    padding: 2em 0 2.5em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1184,6 +1184,126 @@
     z-index: 10;
     padding: 3em 0 5em 0;
   }
+  .tilt .scroller {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    grid-gap: 2em;
+    overflow-x: auto;
+    -ms-scroll-snap-type: inline mandatory;
+        scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1em;
+    padding: 0 1em 0 1em;
+  }
+  .tilt .scroller > * {
+    scroll-snap-align: start;
+  }
+  .tilt .scroller:before {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    right: 0;
+  }
+  .tilt .scroller:after {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    background: -webkit-gradient(linear, right top, left top, from(#00000000), to(#ffffff));
+    background: linear-gradient(to left, #00000000, #ffffff);
+    top: 0;
+    left: 0;
+  }
+  .tilt .scroller::-webkit-scrollbar {
+    display: none;
+    height: 10px;
+    z-index: 9999999;
+  }
+  .tilt .scroller .arrow {
+    display: none;
+  }
+  .tilt .scroller article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #fffdff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #111111;
+  }
+  .tilt .scroller article div:nth-child(1) {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1em;
+  }
+  .tilt .scroller article div:nth-child(1) i {
+    font-size: 3rem;
+    color: #111111;
+  }
+  .tilt .scroller article div:nth-child(2) {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-family: "montserrat";
+  }
+  .tilt .scroller article div:nth-child(2) h3 {
+    font-size: 1rem;
+    color: #111111;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0.5em;
+  }
+  .tilt .scroller article div:nth-child(2) p {
+    font-size: 1rem;
+    color: #111111;
+  }
+  .tilt #scroll-indicator {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 5em 0;
+    text-align: center;
+  }
+  .tilt #scroll-indicator h3 {
+    font-family: "open sans";
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
   .tilt .tilt-inner {
     width: 100%;
     height: -webkit-fit-content;
@@ -1417,7 +1537,8 @@
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 50vw;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
     overflow-x: auto;
     -ms-scroll-snap-type: inline mandatory;
         scroll-snap-type: inline mandatory;
@@ -1477,6 +1598,8 @@
     color: #111111;
   }
   .tilt .scroller article {
+    max-width: 700px;
+    width: 35vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1511,7 +1634,7 @@
     margin-right: 2em;
   }
   .tilt .scroller article div:nth-child(1) i {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #111111;
   }
   .tilt .scroller article div:nth-child(2) {
@@ -1690,12 +1813,17 @@
     cursor: not-allowed;
     opacity: 1;
   }
+  .tilt #scroll-indicator {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .parallax-container {
     width: 100%;
-    height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1708,7 +1836,7 @@
     position: relative;
     z-index: 40;
     background: #111111;
-    padding-top: 5em;
+    padding: 10em 0 5em 0;
   }
   .parallax-container:before {
     content: "";
@@ -1719,23 +1847,7 @@
     height: 100%;
     background: #fffdff;
   }
-  .parallax-container .inner {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
-  }
-  .parallax-container .inner .parallax {
+  .parallax-container .parallax {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1743,14 +1855,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
-            clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 3%, 100% 0, 100% 100%, 0 100%, 0 0);
     z-index: 5;
     position: absolute !important;
     top: 0;
     left: 0;
   }
-  .parallax-container .inner .parallax:after {
+  .parallax-container .parallax:after {
     content: "";
     position: absolute;
     right: 0;
@@ -1758,41 +1870,92 @@
     width: 100%;
     height: 100%;
   }
-  .parallax-container .inner .parallax canvas {
+  .parallax-container .parallax canvas {
     height: 100% !important;
   }
+  .parallax-container .inner {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 415px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.7));
+    z-index: 100;
+    padding: 0 1em;
+  }
   .parallax-container .inner .text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     display: -ms-grid;
     display: grid;
     place-items: center;
     z-index: 10;
+    margin: 2em;
+    background: #111111;
+    padding: 2em;
+    border-radius: 5px;
+    border: 1px solid #fffdff;
   }
   .parallax-container .inner .text-box h5 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #fffdff;
   }
   .parallax-container .inner .text-box img {
-    width: 70%;
+    max-width: 160px;
     height: auto;
+    margin-bottom: 2em;
   }
   .parallax-container .inner .text-box .consult {
     font-family: "open sans";
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #fffdff;
   }
   .parallax-container .inner .text-box .desc {
     font-family: "montserrat";
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #fffdff;
-    text-align: center;
+  }
+  .parallax-container .inner .wrapper {
+    width: 100% !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    background: #111111 !important;
+    border: 1px solid #fffdff;
+    padding: 2em;
+    margin: 2em;
+  }
+  .parallax-container .inner .wrapper form {
+    margin: 0;
+  }
+  .parallax-container .inner .wrapper input, .parallax-container .inner .wrapper textarea, .parallax-container .inner .wrapper button, .parallax-container .inner .wrapper span {
+    font-family: "montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    background: #111111 !important;
+    color: #fffdff !important;
+  }
+  .parallax-container .inner .wrapper button {
+    border: 1px solid #fffdff;
   }
 }
 
@@ -1834,14 +1997,6 @@
     -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
             clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
     z-index: 5;
-  }
-  .parallax-container .parallax:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
   }
   .parallax-container .parallax canvas {
     height: 100% !important;
