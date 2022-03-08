@@ -1537,7 +1537,7 @@
   }
   .tilt .scroller article {
     max-width: 700px;
-    width: 35vw;
+    width: 34vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1545,6 +1545,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     background: #fffdff;
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -1554,7 +1556,7 @@
     margin: 3em 3em 8em 3em;
   }
   .tilt .scroller article div:nth-child(1) {
-    width: 40%;
+    width: 30%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1569,7 +1571,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: 1em;
   }
   .tilt .scroller article div:nth-child(1) i {
     font-size: 4rem;
